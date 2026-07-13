@@ -15,7 +15,7 @@ function assistant() {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        "http://localhost:3000/user/chat" ,
+         `${import.meta.env.VITE_API_URL}/user/chat`,
         {
           method: "POST",
           body: JSON.stringify({message}),
