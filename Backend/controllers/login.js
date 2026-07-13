@@ -1,12 +1,16 @@
 import User from "../models/usermodel.js";
 import bcrypt from "bcrypt";
+import jwt from 'jsonwebtoken'
 
 const login = async (req,res)=>{
     try{
         const {email,password} = req.body;
 
-        console.log("Request Body:", req.body);
-console.log("Email received:", email);
+         if(!email || !password) {
+            return res.status(400).json({
+                message: "All fields are required."
+            })
+        } 
 
     const userdetails = await  User.findOne({email});
 
@@ -19,8 +23,21 @@ console.log("Email received:", email);
         return res.json({message: "password is incorrect"});
     }
 
-    return res.status(200).json({message: "login sucessfully"});
+    const token = jwt.sign(
+        {userid: userdetails._id},
+        process.env.JWT_SECRET,
+        {expiresIn: "1d"}
+    );
 
+    const response = {
+        message:"login successfully",
+        token,
+        user:{
+            username: userdetails.username
+        }
+    };
+
+    res.json(response);
     }
     catch(err){
         return res.json({message: err.message});
