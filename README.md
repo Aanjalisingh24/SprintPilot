@@ -1,4 +1,4 @@
-SprintPilot – AI-Powered Jira Management & QA Copilot
+# SprintPilot – AI-Powered Jira Management & QA Copilot
 
 SprintPilot is a full-stack MERN application that combines Jira ticket visualization with an AI-powered QA Copilot to help developers, testers, and project teams quickly understand project information and technical concepts. The application provides secure user authentication, displays Jira ticket details through an intuitive dashboard, and features an intelligent AI assistant capable of answering both project-specific and general technical questions.
 
@@ -33,14 +33,14 @@ The AI Copilot uses Groq Llama 3.3 to analyze live Jira ticket data, explain tec
 
 # Tech Stack
 
-Frontend
+* Frontend
 React.js
 Tailwind CSS
 React Router DOM
 Axios
 React Markdown
 
-Backend
+* Backend
 Node.js
 Express.js
 MongoDB
@@ -48,7 +48,7 @@ Mongoose
 JWT Authentication
 Groq SDK
 
-AI
+* AI
 Groq API
 Llama 3.3 70B Versatile
 Context-aware prompting
