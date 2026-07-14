@@ -33,14 +33,14 @@ The AI Copilot uses Groq Llama 3.3 to analyze live Jira ticket data, explain tec
 
 # Tech Stack
 
-* Frontend
+* Frontend: 
 React.js
 Tailwind CSS
 React Router DOM
 Axios
 React Markdown
 
-* Backend
+* Backend:
 Node.js
 Express.js
 MongoDB
@@ -48,7 +48,7 @@ Mongoose
 JWT Authentication
 Groq SDK
 
-* AI
+* AI:
 Groq API
 Llama 3.3 70B Versatile
 Context-aware prompting
